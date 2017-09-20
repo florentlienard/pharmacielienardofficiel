@@ -22,7 +22,7 @@ class OrdonnancesController < ApplicationController
       if @ordonnance.save
         format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
         format.json { render :show, status: :created, location: @ordonnance }
-        # OrdonnanceMailer.welcome(@ordonnance).deliver_now
+        OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
       else
         format.html { render :new }
         format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
@@ -30,20 +30,10 @@ class OrdonnancesController < ApplicationController
     end
   end
 
-  #  def create
-  #   @ordonnance = Ordonnance.new(ordonnance_params)
-  #     if @ordonnance.save
-  #       #OrdonnanceMailer.welcome(@ordonnance).deliver_now
-  #       redirect_to @ordonnance
-  #     else
-  #       render :new
-  #     end
-  # end
-
-    def update
-      @ordonnance.update(ordonnance_params)
-      redirect_to ordonnance_path(@ordonnance)
-    end
+    # def update
+    #   @ordonnance.update(ordonnance_params)
+    #   redirect_to ordonnance_path(@ordonnance)
+    # end
 
   private
 
