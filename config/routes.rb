@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   get 'services', to: 'pages#services'
   get 'gammes', to: 'pages#gammes'
   get 'contact', to: 'pages#contact'
+
+  Rails.application.routes.draw do
+      resources :ordonnances, only: [:show, :index, :new, :create]
+    end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

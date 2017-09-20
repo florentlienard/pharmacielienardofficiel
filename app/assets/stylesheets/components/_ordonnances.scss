@@ -1,0 +1,28 @@
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+.step-description {
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+  width: 250px;
+}
+@media (max-width: 750px)
+  {
+    .steps {
+      flex-direction: column;
+  }
+    .step {
+      margin: 20px;
+    }
+}
+
