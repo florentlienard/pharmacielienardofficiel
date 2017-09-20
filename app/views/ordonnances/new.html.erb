@@ -25,14 +25,15 @@
   </div>
 </div>
 
+  <%= simple_form_for(Ordonnance.new) do |f| %>
+  <div class="form-container">
 
+  <%= f.input :last_name, label: "Nom", :input_html => { class: 'field' } %>
+  <%= f.input :first_name, label: "Prénom", :input_html => { class: 'field' } %>
+  <%= f.input :email, label: "Email", :input_html => { class: 'field' } %>
+  <%= f.input :social_number, label: "Numéro de sécurité social", :input_html => { class: 'field' } %>
+  <%#= f.input :photo, as: :attachinary %>
+  <%= f.button :submit, "Envoyer mon ordonnance", class: "btn btn-primary btn-field"  %>
+  <% end %>
 
-<%= simple_form_for(Ordonnance.new) do |f| %>
-<%= f.input :last_name, placeholder: "Nom" %>
-<%= f.input :first_name, placeholder: "Prénom" %>
-<%= f.input :email, placeholder: "Email" %>
-<%= f.input :social_number, placeholder: "Numéro de sécurité social" %>
-<%#= f.input :photo, as: :attachinary %>
-<%= f.button :submit, class: "btn btn-primary"  %>
-
-<% end %>
+  </div>
