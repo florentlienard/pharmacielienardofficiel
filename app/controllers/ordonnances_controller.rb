@@ -16,10 +16,26 @@ end
   end
 
   # POST /ordonnances
-  def create
+
+
+  # def create
+  #   @ordonnance = Ordonnance.new(ordonnance_params)
+  #       respond_to do |format|
+  #     if @ordonnance.save
+  #       format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
+  #       format.json { render :show, status: :created, location: @ordonnance }
+  #       # OrdonnanceMailer.welcome(@ordonnance).deliver_now
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
+
+   def create
     @ordonnance = Ordonnance.new(ordonnance_params)
     if @ordonnance.save
-      # OrdonnanceMailer.welcome(@ordonnance).deliver_now
+      #OrdonnanceMailer.welcome(@ordonnance).deliver_now
       redirect_to root_path
     else
       render :new

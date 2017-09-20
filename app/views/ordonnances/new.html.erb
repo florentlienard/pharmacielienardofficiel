@@ -1,0 +1,37 @@
+<div class="steps">
+  <div class="step">
+    <div class="step-picto">
+      <%= image_tag 'send.png', width: 80 %>
+    </div>
+    <div class = "step-description">
+    <p>1 - Je scanne mon ordonnance</p>
+    </div>
+  </div>
+    <div class="step">
+    <div class="step-picto">
+      <%= image_tag 'mail.png', width: 80 %>
+    </div>
+    <div class = "step-description">
+    <p>2 - Je reçois un mail dès que mon ordonnance est prète</p>
+    </div>
+  </div>
+    <div class="step">
+    <div class="step-picto">
+      <%= image_tag 'pharmacy.png', width: 80 %>
+    </div>
+    <div class = "step-description">
+    <p>3 - Je récupère ma commande à la pharmacie</p>
+    </div>
+  </div>
+</div>
+<div class="simple-form-ordonnance">
+
+<%= simple_form_for(Ordonnance.new) do |f| %>
+<%= f.input :last_name, placeholder: "Nom" %>
+<%= f.input :first_name, placeholder: "Prénom" %>
+<%= f.input :email, placeholder: "Email" %>
+<%= f.input :social_number, placeholder: "Numéro de sécurité social" %>
+<%#= f.input :photo, as: :attachinary %>
+<%= f.button :submit, class: "btn btn-primary"  %>
+<% end %>
+</div>
