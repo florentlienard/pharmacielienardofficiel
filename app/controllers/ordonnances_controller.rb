@@ -1,5 +1,4 @@
 class OrdonnancesController < ApplicationController
-end
 
   def index
     @ordonnances = Ordonnance.all
@@ -17,30 +16,34 @@ end
 
   # POST /ordonnances
 
-
-  # def create
-  #   @ordonnance = Ordonnance.new(ordonnance_params)
-  #       respond_to do |format|
-  #     if @ordonnance.save
-  #       format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
-  #       format.json { render :show, status: :created, location: @ordonnance }
-  #       # OrdonnanceMailer.welcome(@ordonnance).deliver_now
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-   def create
+  def create
     @ordonnance = Ordonnance.new(ordonnance_params)
-    if @ordonnance.save
-      #OrdonnanceMailer.welcome(@ordonnance).deliver_now
-      redirect_to root_path
-    else
-      render :new
+        respond_to do |format|
+      if @ordonnance.save
+        format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
+        format.json { render :show, status: :created, location: @ordonnance }
+        # OrdonnanceMailer.welcome(@ordonnance).deliver_now
+      else
+        format.html { render :new }
+        format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
+      end
     end
   end
+
+  #  def create
+  #   @ordonnance = Ordonnance.new(ordonnance_params)
+  #     if @ordonnance.save
+  #       #OrdonnanceMailer.welcome(@ordonnance).deliver_now
+  #       redirect_to @ordonnance
+  #     else
+  #       render :new
+  #     end
+  # end
+
+    def update
+      @ordonnance.update(ordonnance_params)
+      redirect_to ordonnance_path(@ordonnance)
+    end
 
   private
 
@@ -48,3 +51,4 @@ end
   def ordonnance_params
     params.require(:ordonnance).permit(:first_name, :last_name, :email, :social_number, :photo)
   end
+end

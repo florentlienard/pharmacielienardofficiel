@@ -24,7 +24,8 @@
     </div>
   </div>
 </div>
-<div class="simple-form-ordonnance">
+
+
 
 <%= simple_form_for(Ordonnance.new) do |f| %>
 <%= f.input :last_name, placeholder: "Nom" %>
@@ -33,5 +34,5 @@
 <%= f.input :social_number, placeholder: "Numéro de sécurité social" %>
 <%#= f.input :photo, as: :attachinary %>
 <%= f.button :submit, class: "btn btn-primary"  %>
+
 <% end %>
-</div>
