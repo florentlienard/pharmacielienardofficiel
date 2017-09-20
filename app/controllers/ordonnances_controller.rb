@@ -22,7 +22,7 @@ class OrdonnancesController < ApplicationController
       if @ordonnance.save
         format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
         format.json { render :show, status: :created, location: @ordonnance }
-        OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
+        # OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
       else
         format.html { render :new }
         format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
