@@ -1,8 +1,8 @@
 .steps {
   display: flex;
   justify-content: space-around;
-  margin-right: 60px;
-  margin-left: 60px;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 .step {
   display: flex;
@@ -16,7 +16,7 @@
   text-align: center;
   width: 250px;
 }
-@media (max-width: 750px)
+@media (max-width: 800px)
   {
     .steps {
       flex-direction: column;
