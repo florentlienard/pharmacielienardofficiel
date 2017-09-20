@@ -16,28 +16,28 @@ class OrdonnancesController < ApplicationController
 
   # POST /ordonnances
 
-  def create
-    @ordonnance = Ordonnance.new(ordonnance_params)
-        respond_to do |format|
-      if @ordonnance.save
-        # OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
-        format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
-        format.json { render :show, status: :created, location: @ordonnance }
-      else
-        format.html { render :new }
-        format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
-      end
-    end
-  end
   # def create
   #   @ordonnance = Ordonnance.new(ordonnance_params)
-  #   if @ordonnance.save
-  #     OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
-  #     redirect_to root_path
-  #   else
-  #     render :new
+  #       respond_to do |format|
+  #     if @ordonnance.save
+  #       # OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
+  #       format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
+  #       format.json { render :show, status: :created, location: @ordonnance }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
+  #     end
   #   end
   # end
+  def create
+    @ordonnance = Ordonnance.new(ordonnance_params)
+    if @ordonnance.save
+      OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
 
     # def update
     #   @ordonnance.update(ordonnance_params)
