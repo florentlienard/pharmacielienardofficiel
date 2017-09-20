@@ -32,16 +32,23 @@
 /* Basic navbar item */
 .navbar-wagon-item {
   cursor: pointer;
-  padding: 0 20px;
+  padding: 25px 20px;
+  transition: 0.3s;
+}
+.navbar-wagon-item:hover {
+  cursor: pointer;
+  padding: 25px 20px;
+  background-color: #101038
 }
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: #101038;
   font-size: 14px;
+  font-weight: bold;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: white;
   text-decoration: none;
 }
 
