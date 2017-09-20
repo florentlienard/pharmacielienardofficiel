@@ -32,7 +32,7 @@ class OrdonnancesController < ApplicationController
   def create
     @ordonnance = Ordonnance.new(ordonnance_params)
     if @ordonnance.save
-      OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
+      # OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
       redirect_to root_path
     else
       render :new
