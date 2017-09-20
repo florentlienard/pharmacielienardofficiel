@@ -16,17 +16,26 @@ class OrdonnancesController < ApplicationController
 
   # POST /ordonnances
 
+  # def create
+  #   @ordonnance = Ordonnance.new(ordonnance_params)
+  #       respond_to do |format|
+  #     if @ordonnance.save
+  #       OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
+  #       format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
+  #       format.json { render :show, status: :created, location: @ordonnance }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
   def create
     @ordonnance = Ordonnance.new(ordonnance_params)
-        respond_to do |format|
-      if @ordonnance.save
-        OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
-        format.html { redirect_to @ordonnance, notice: 'ordonnance was successfully created.' }
-        format.json { render :show, status: :created, location: @ordonnance }
-      else
-        format.html { render :new }
-        format.json { render json: @ordonnance.errors, status: :unprocessable_entity }
-      end
+    if @ordonnance.save
+      OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
+      redirect_to root_path
+    else
+      render :new
     end
   end
 
@@ -39,6 +48,6 @@ class OrdonnancesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def ordonnance_params
-    params.require(:ordonnance).permit(:first_name, :last_name, :email, :social_number, :photo)
+    params.require(:ordonnance).permit(:first_name, :last_name, :email, :social_number)
   end
 end
