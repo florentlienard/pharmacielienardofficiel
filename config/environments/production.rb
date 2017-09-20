@@ -86,10 +86,10 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
+
   config.action_mailer.delivery_method     = :postmark
   config.action_mailer.postmark_settings   = { api_key: ENV['8a68959b-ae03-4f7f-b231-0fc37eb26701'] }
   config.action_mailer.default_url_options = { host: "pharmacielienard.herokuapp.com" }
-
-  # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
 end
