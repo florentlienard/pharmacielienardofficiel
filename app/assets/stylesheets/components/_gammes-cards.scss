@@ -1,0 +1,34 @@
+.card-container {
+  width: 100%;
+  margin: 40px;
+}
+
+.cards {
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card {
+  width: 200px;
+  height: 250px;
+  margin: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.card:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+.gamme-title {
+  font-weight: bold;
+  border-top: solid 1px rgb(130, 130, 130);
+  padding-top: 15px;
+  text-decoration: none;
+  color: black;
+}
