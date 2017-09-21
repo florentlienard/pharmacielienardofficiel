@@ -10,7 +10,7 @@ class ContactMailer < ApplicationMailer
 
         mail(
       to:       'contact@pharmacielienard.fr',
-      subject:  "@contact.first_name @contact.last_name vient d'envoyer un message"
+      subject:  "#{@contact.first_name} #{@contact.last_name} vient d'envoyer un message"
     )
   end
 end
