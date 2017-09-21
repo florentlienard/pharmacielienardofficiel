@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: space-around;
   padding: 40px;
+        transition: 0.5s;
 }
 .steps {
   display: flex;
@@ -29,7 +30,7 @@
 }
 @media (max-width: 800px)
   {
-    .steps {
+    .new-container {
       flex-direction: column;
   }
     .step {
