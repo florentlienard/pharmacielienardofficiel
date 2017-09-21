@@ -32,10 +32,12 @@ class OrdonnancesController < ApplicationController
   def create
     @ordonnance = Ordonnance.new(ordonnance_params)
     if @ordonnance.save
+      flash[:notice] = "Votre ordonnance a bien été envoyée !"
       # OrdonnanceMailer.new_ordo(@ordonnance).deliver_now
-      redirect_to root_path
+      redirect_to new_ordonnance_path
     else
-      render :new
+      redirect_to ordonnances_new_path
+      flash[:notice] = "Attention : l'envoi de votre ordonnance a échoué, pensez à bien remplir tous les champs :)"
     end
   end
 

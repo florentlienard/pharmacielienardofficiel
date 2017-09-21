@@ -1,39 +1,39 @@
-<div class="steps">
-  <div class="step">
-    <div class="step-picto">
-      <%= image_tag 'send.png', width: 60 %>
-    </div>
-    <div class = "step-description">
-    <p>1 - Je remplis mes informations et scanne mon ordonnance</p>
-    </div>
+<div class="new-container">
+  <%= simple_form_for(Ordonnance.new) do |f| %>
+  <div class="form-container">
+    <%= f.input :last_name, label: "Nom", :input_html => { class: 'field' } %>
+    <%= f.input :first_name, label: "Prénom", :input_html => { class: 'field' } %>
+    <%= f.input :email, label: "Email", :input_html => { class: 'field' } %>
+    <%= f.input :social_number, label: "Numéro de sécurité social", :input_html => { class: 'field' } %>
+    <%#= f.input :photo, as: :attachinary %>
+    <%= f.button :submit, "Envoyer mon ordonnance", class: "btn btn-primary btn-field"  %>
+    <% end %>
   </div>
+
+  <div class="steps">
     <div class="step">
-    <div class="step-picto">
-      <%= image_tag 'mail.png', width: 60 %>
+      <div class="step-picto">
+        <%= image_tag 'send.png', width: 60 %>
+      </div>
+      <div class = "step-description">
+        <p>1 - Je remplis mes informations et scanne mon ordonnance</p>
+      </div>
     </div>
-    <div class = "step-description">
-    <p>2 - Je reçois un mail dès que mon ordonnance est prète</p>
-    </div>
-  </div>
     <div class="step">
-    <div class="step-picto">
-      <%= image_tag 'pharmacy.png', width: 60 %>
+      <div class="step-picto">
+        <%= image_tag 'mail.png', width: 60 %>
+      </div>
+      <div class = "step-description">
+        <p>2 - Je reçois un mail dès que mon ordonnance est prète</p>
+      </div>
     </div>
-    <div class = "step-description">
-    <p>3 - Je récupère ma commande à la pharmacie</p>
+    <div class="step">
+      <div class="step-picto">
+        <%= image_tag 'pharmacy.png', width: 60 %>
+      </div>
+      <div class = "step-description">
+        <p>3 - Je récupère ma commande à la pharmacie sans faire la queue !</p>
+      </div>
     </div>
   </div>
 </div>
-
-  <%= simple_form_for(Ordonnance.new) do |f| %>
-  <div class="form-container">
-
-  <%= f.input :last_name, label: "Nom", :input_html => { class: 'field' } %>
-  <%= f.input :first_name, label: "Prénom", :input_html => { class: 'field' } %>
-  <%= f.input :email, label: "Email", :input_html => { class: 'field' } %>
-  <%= f.input :social_number, label: "Numéro de sécurité social", :input_html => { class: 'field' } %>
-  <%#= f.input :photo, as: :attachinary %>
-  <%= f.button :submit, "Envoyer mon ordonnance", class: "btn btn-primary btn-field"  %>
-  <% end %>
-
-  </div>

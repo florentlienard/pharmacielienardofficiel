@@ -17,12 +17,12 @@ class ContactsController < ApplicationController
   # POST /contacts
 
   # def create
-  #   @contact = contact.new(contact_params)
+  #   @contact = Contact.new(contact_params)
   #       respond_to do |format|
   #     if @contact.save
   #       # contactMailer.new_ordo(@contact).deliver_now
   #       format.html { redirect_to @contact, notice: 'contact was successfully created.' }
-  #       format.json { render :show, status: :created, location: @contact }
+  #       format.json { render :new, status: :created, location: @contact }
   #     else
   #       format.html { render :new }
   #       format.json { render json: @contact.errors, status: :unprocessable_entity }
@@ -32,17 +32,13 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      # contactMailer.new_ordo(@contact).deliver_now
+      flash[:notice] = "Votre message a bien été envoyé !"
       redirect_to root_path
     else
-      render :new
+     redirect_to contacts_path
+     flash[:notice] = "Attention : l'envoi de votre message a échoué, pensez à bien remplir tous les champs :)"
     end
   end
-
-    # def update
-    #   @contact.update(contact_params)
-    #   redirect_to contact_path(@contact)
-    # end
 
   private
 
