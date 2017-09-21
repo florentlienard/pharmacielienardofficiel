@@ -1,10 +1,10 @@
-  <%= simple_form_for(Ordonnance.new) do |f| %>
+  <%= simple_form_for(Contact.new) do |f| %>
   <div class="form-container">
     <%= f.input :last_name, label: "Nom", :input_html => { class: 'field' } %>
     <%= f.input :first_name, label: "Prénom", :input_html => { class: 'field' } %>
     <%= f.input :email, label: "Email", :input_html => { class: 'field' } %>
-    <%= f.input :email, label: "Email", :input_html => { class: 'field' } %>
+    <%= f.input :comment, label: "Commentaire", :input_html => { class: 'field'} %>
     <%#= f.input :photo, as: :attachinary %>
-    <%= f.button :submit, "Envoyer mon ordonnance", class: "btn btn-primary btn-field"  %>
+    <%= f.button :submit, "Envoyer", class: "btn btn-primary btn-field"  %>
   <% end %>
   </div>

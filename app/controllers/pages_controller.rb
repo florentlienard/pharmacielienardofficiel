@@ -5,6 +5,4 @@ class PagesController < ApplicationController
   end
   def gammes
   end
-  def contact
-  end
 end
