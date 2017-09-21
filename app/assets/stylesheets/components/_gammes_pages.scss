@@ -1,0 +1,42 @@
+.title-page {
+  text-align:center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.title-services {
+  padding: 10px 0;
+}
+#border-title {
+  background-color: #11883b;
+  width: 80px;
+  height: 1px;
+  margin: 20px auto 40px;
+}
+.gamme-content {
+  margin: 0px 150px;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+.gamme-intro {
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 20px;
+}
+
+@media(max-width: 720px) {
+  .gamme-content {
+    margin: 30px;
+  }
+  .footer {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+}
