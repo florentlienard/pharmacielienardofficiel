@@ -41,11 +41,6 @@ class OrdonnancesController < ApplicationController
     end
   end
 
-    # def update
-    #   @ordonnance.update(ordonnance_params)
-    #   redirect_to ordonnance_path(@ordonnance)
-    # end
-
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.
