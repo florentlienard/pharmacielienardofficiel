@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'veterinaire', to: 'pages#veterinaire'
   get 'optique', to: 'pages#optique'
 
-
+  mount Attachinary::Engine => "/attachinary"
 
   Rails.application.routes.draw do
       resources :ordonnances, only: [:show, :index, :new, :create]

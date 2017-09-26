@@ -5,6 +5,7 @@ class Ordonnance < ApplicationRecord
   validates :email, presence: true, allow_blank: false
   validates :social_number, presence: true, allow_blank: false
   #validates :photo, presence: true, allow_blank: false
+  has_attachment :photo
 
   after_create :send_new_ordo_email
 

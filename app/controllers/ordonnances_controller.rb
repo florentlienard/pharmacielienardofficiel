@@ -45,6 +45,6 @@ class OrdonnancesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def ordonnance_params
-    params.require(:ordonnance).permit(:first_name, :last_name, :email, :social_number)
+    params.require(:ordonnance).permit(:first_name, :last_name, :email, :social_number, :photo)
   end
 end
