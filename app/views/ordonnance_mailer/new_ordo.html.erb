@@ -6,4 +6,5 @@
 <p><strong>Prénom :</strong>  <%= @ordonnance.first_name %></p>
 <p><strong>Email :</strong>  <%= @ordonnance.email %></p>
 <p><strong>Numéro de sécurité sociale :</strong>  <%= @ordonnance.social_number %></p>
+<%= cl_image_tag @ordonnance.photo.path, crop: :fill %>
 
