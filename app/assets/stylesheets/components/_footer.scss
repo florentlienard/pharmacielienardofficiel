@@ -1,13 +1,17 @@
 .footer {
-  background: #101038;
+  background: $blue;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 0px 50px;
   padding: 25px 45px;
-  color: white;
+  color: #3D3F40;
   height: 300px;
   transition: 0.5s;
+  border-top: 2px solid #d3f1fb;
+}
+.footer p {
+  font-weight: bold;
 }
 .footer-links {
   display: flex;
@@ -47,6 +51,9 @@
 .footer-content {
   font-size: 13px;
   opacity: 0.95;
+}
+.footer-content p{
+  font-weight: lighter;
 }
 @media(max-width: 720px) {
   .info-col-1 {

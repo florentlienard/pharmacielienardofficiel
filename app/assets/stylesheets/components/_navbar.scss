@@ -34,16 +34,18 @@
   cursor: pointer;
   padding: 25px 20px;
   transition: 0.3s;
+  color: $green;
 }
 .navbar-wagon-item:hover {
   cursor: pointer;
   padding: 25px 20px;
-  background-color: #101038
+  background-color: $green;
+  color: white;
 }
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #101038;
+  color: $green;
   font-size: 14px;
   font-weight: bold;
 }
