@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'incontinence', to: 'pages#incontinence'
   get 'veterinaire', to: 'pages#veterinaire'
   get 'optique', to: 'pages#optique'
+  get 'oncologie', to: 'pages#oncologie'
+  get 'fleurdebach', to: 'pages#fleurdebach'
 
   mount Attachinary::Engine => "/attachinary"
 

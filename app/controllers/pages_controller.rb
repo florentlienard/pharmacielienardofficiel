@@ -27,4 +27,8 @@ class PagesController < ApplicationController
   end
   def optique
   end
+  def oncologie
+  end
+  def fleurdebach
+  end
 end

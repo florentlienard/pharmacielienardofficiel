@@ -1,12 +1,12 @@
 <div class="card-container">
   <div class="cards">
-  <%= link_to phytotherapie_path  do %>
+    <%= link_to phytotherapie_path  do %>
     <div class="card">
-        <%= image_tag('phytotherapie.png', height: 150, width: 150)%>
+      <%= image_tag('phytotherapie.png', height: 150, width: 150)%>
       <p class="gamme-title">Phytothérapie</p>
     </div>
-      <% end %>
-  <%= link_to homeopathie_path  do %>
+    <% end %>
+    <%= link_to homeopathie_path  do %>
     <div class="card">
       <%= image_tag('homeopathie.png', height: 150, width: 150) %>
       <p class="gamme-title">Homéopathie</p>
@@ -39,7 +39,7 @@
     <%= link_to complements_alimentaires_path  do %>
     <div class="card">
       <%= image_tag('complements_alimentaires.png', height: 150, width: 150) %>
-      <p class="gamme-title">Complément Alimentaire</p>
+      <p class="gamme-title">Diététique / Micronutrition</p>
     </div>
     <% end %>
     <%= link_to dermatologie_path  do %>
@@ -64,6 +64,18 @@
     <div class="card">
       <%= image_tag('optique.png', height: 150, width: 150) %>
       <p class="gamme-title">Optique</p>
+    </div>
+    <% end %>
+    <%= link_to oncologie_path  do %>
+    <div class="card">
+      <%= image_tag('oncologie.png', height: 150, width: 150, id: "avatar") %>
+      <p class="gamme-title">Accompagnement oncologie</p>
+    </div>
+    <% end %>
+    <%= link_to fleurdebach_path  do %>
+    <div class="card">
+      <%= image_tag('fleurdebach.png', height: 150, width: 150, id: "avatar") %>
+      <p class="gamme-title">Fleur de Bach</p>
     </div>
     <% end %>
   </div>
