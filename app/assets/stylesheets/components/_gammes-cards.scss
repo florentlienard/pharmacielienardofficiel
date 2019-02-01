@@ -18,16 +18,17 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  transition: 0.3s;
+  transition: 0.1s;
   text-decoration: none;
+  box-shadow: 2px 4px 17px rgba(0, 0, 0, 0.05);
 }
 .card:hover {
-  opacity: 0.7;
   text-decoration: none;
+  box-shadow: 2px 4px 27px rgba(0, 0, 0, 0.1);
 }
 .gamme-title {
   font-weight: bold;
-  border-top: solid 1px rgb(130, 130, 130);
+  // border-top: solid 1px rgb(130, 130, 130);
   padding-top: 15px;
   text-decoration: none;
   color: black;
@@ -35,3 +36,4 @@
 #avatar {
   border-radius: 50%;
 }
+

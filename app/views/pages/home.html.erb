@@ -5,6 +5,39 @@
   <p class = "message-bottom"><strong>Parce que votre santé est notre priorité.</strong></p>
 </div>
 <div class="team-temporary-message">
-  <p class = "message-temporary-top"><strong>Message de l'équipe </strong></p>
-  <p class = "message-temporary-bottom"><strong>"Nous souhaitons une excellente année"</strong></p>
-</div>
+  <!-- <p class = "message-temporary-top"><strong>Message de l'équipe </strong></p>
+  <p class = "message-temporary-bottom"><strong>"Nous souhaitons une excellente année"</strong></p> -->
+    <div class="cards">
+      <%= link_to phytotherapie_path  do %>
+      <div class="card">
+        <%= image_tag('phytotherapie.png', height: 150, width: 150)%>
+        <p class="gamme-title">Phytothérapie</p>
+      </div>
+      <% end %>
+      <%= link_to homeopathie_path  do %>
+      <div class="card">
+        <%= image_tag('homeopathie.png', height: 150, width: 150) %>
+        <p class="gamme-title">Homéopathie</p>
+      </div>
+      <% end %>
+      <%= link_to gemmotherapie_path  do %>
+      <div class="card">
+        <%= image_tag('gemmotherapy.png', height: 150, width: 150)%>
+        <p class="gamme-title">Gemmothérapie</p>
+      </div>
+      <% end %>
+      <%= link_to puericulture_path  do %>
+      <div class="card">
+        <%= image_tag('puericulture.png', height: 150, width: 150) %>
+        <p class="gamme-title">Puériculture</p>
+      </div>
+      <% end %>
+      <%= link_to orthopedie_path  do %>
+      <div class="card">
+        <%= image_tag('orthopedie.png', height: 150, width: 150) %>
+        <p class="gamme-title">Orthopédie</p>
+      </div>
+      <% end %>
+    </div>
+    <a href="/gammes" class="btn-medium">Voir toutes les gammes</a>
+  </div>
